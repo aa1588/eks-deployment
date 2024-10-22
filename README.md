@@ -38,4 +38,12 @@ eksctl create cluster \
 --node-type t2.micro \
 --nodes 2
 ```
-After the cluster is created, the details about the cluster will be stored at `2024-10-22 15:14:55 [✔]  saved kubeconfig as "/Users/bluestone/.kube/config"` location which `eksctl` can use to connect to the cluster later.
+After the cluster is created, the details about the cluster will be stored at `2024-10-22 15:14:55 [✔]  saved kubeconfig as "/Users/bluestone/.kube/config"` location which `kubectl` can use to connect to the cluster later.
+Now, kubectl command should work with "/Users/bluestone/.kube/config".
+
+```bash
+❯ kubectl get nodes
+NAME                             STATUS   ROLES    AGE     VERSION
+ip-192-168-16-44.ec2.internal    Ready    <none>   4m43s   v1.30.4-eks-a737599
+ip-192-168-52-133.ec2.internal   Ready    <none>   5m6s    v1.30.4-eks-a737599
+```
