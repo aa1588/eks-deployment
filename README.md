@@ -1,7 +1,13 @@
 # eks-deployment
 Micorservices Deployement using Docker and K8s (EKS)
 
+### Install eksctl Mac
+```bash
+$ brew tap weaveworks/tap
+$ brew install weaveworks/tap/eksctl
+$ eksctl version
 
+```
 
 ### Install AWS CLI
 Link - https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
