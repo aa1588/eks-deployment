@@ -47,3 +47,7 @@ NAME                             STATUS   ROLES    AGE     VERSION
 ip-192-168-16-44.ec2.internal    Ready    <none>   4m43s   v1.30.4-eks-a737599
 ip-192-168-52-133.ec2.internal   Ready    <none>   5m6s    v1.30.4-eks-a737599
 ```
+
+### Delete cluseter and all resources created above
+
+`eksctl delete cluster --name test-cluster`
