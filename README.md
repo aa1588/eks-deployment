@@ -36,13 +36,13 @@ Default output format [None]: json
 
 ### Create cluster 
 ```bash
-eksctl create cluster \
+eksctl create cluster \                                                                                             
 --name test-cluster \
 --version 1.30 \
 --region us-east-1 \
 --nodegroup-name linux-nodes \
---node-type t2.micro \
---nodes 2
+--node-type m5.large \
+--nodes 3
 ```
 After the cluster is created, the details about the cluster will be stored at `2024-10-22 15:14:55 [✔]  saved kubeconfig as "/Users/bluestone/.kube/config"` location which `kubectl` can use to connect to the cluster later.
 Now, kubectl command should work with "/Users/bluestone/.kube/config".
@@ -157,3 +157,10 @@ Forwarding from [::1]:20001 -> 20001
  ### Accessing Grafana
  
  `kubectl port-forward svc/grafana -n istio-system 3000`
+
+
+ ## Delete all the pods and resources
+ 
+ `$ kubectl delete -f kubernetes-manifests.yaml`
+ 
+ `$ eksctl delete cluster --name test-cluster`
