@@ -59,6 +59,13 @@ ip-192-168-52-133.ec2.internal   Ready    <none>   5m6s    v1.30.4-eks-a737599
 `eksctl delete cluster --name test-cluster`
 
 
+### Scale up currencyservice
+`kubectl scale deployment currencyservice --replicas=3`
+
+
+### Scale down currencyservice
+`kubectl scale deployment currencyservice --replicas=1`
+
 
 
 # Istio (Service Mesh)
