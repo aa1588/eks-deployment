@@ -116,6 +116,9 @@ $ `kubectl get ns default --show-labels`
 NAME      STATUS   AGE    LABELS
 default   Active   130m   stio-injection=enabled,kubernetes.io/metadata.name=default
 ```
+## unlabel
+`kubectl label namespace default istio-injection-`
+
 
 Now, shut down all the pods running and recreate them to see all the proxies injected to each pods.
 
