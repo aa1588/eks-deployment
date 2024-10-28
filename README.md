@@ -1,4 +1,4 @@
-# eks-deployment
+# Deploy Microservices using Kubernetes - EKS
 Micorservices Deployement using Docker and K8s (EKS)
 
 ### Install eksctl Mac
