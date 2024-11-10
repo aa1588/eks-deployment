@@ -32,6 +32,7 @@ Micorservices Deployment using Docker and K8s (EKS)
 # 1. Setup
 ## Install eksctl on Mac
 ![eksctl Logo](https://repository-images.githubusercontent.com/134539560/11b62283-0ebd-4a07-953d-c373e74bacec)
+[eksctl Guide](https://eksctl.io/)
 ```bash
 $ brew tap weaveworks/tap
 $ brew install weaveworks/tap/eksctl
@@ -97,6 +98,27 @@ ip-192-168-52-133.ec2.internal   Ready    <none>   5m6s    v1.30.4-eks-a737599
 
 ## Deploy Microservices
 A **Kubernetes Manifest** file is a YAML or JSON file that describes the desired state of a Kubernetes object. These objects can include deployment, replica set, service, and more. Manifest files define the specifications of the object, such as its metadata, properties, and desired state.
+
+**Deploy**
+
+`kubectl apply -f k8s-manifests.yaml`
+
+**List Pods**
+
+`kubectl get pods`
+
+**List Services**
+
+`kubectl get svc`
+
+**List Deployments**
+
+`kubectl get deploy`
+
+**List Namespace**
+
+`kubectl get ns`
+
 
 
 
