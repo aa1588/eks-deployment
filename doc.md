@@ -2,6 +2,8 @@
 
 Micorservices Deployment using Docker and K8s (EKS)
 
+[GoogleCloudPlatform/Microservices-demo](https://github.com/GoogleCloudPlatform/microservices-demo)
+
 ## Table of Contents
 - [1. Setup](#eksctl)
   - [Install eksctl on Mac](#install-eksctl-mac)
