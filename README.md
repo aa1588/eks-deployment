@@ -70,11 +70,15 @@ ip-192-168-52-133.ec2.internal   Ready    <none>   5m6s    v1.30.4-eks-a737599
 
 # Istio (Service Mesh)
 
-### Download istio and configure
-1. Download Istio Package on your local machine - `https://github.com/istio/istio/releases/tag/1.23.2`
+### Download istio and configure (local machine)
+```
+1. Download Istio Package on your local machine - https://github.com/istio/istio/releases/tag/1.23.2
+```
+```
 2. Unzip the package and move to working directory.
 3. open the package, `bin` folder contains `istioctl` and `samples > addons` contains kiali, grafana and prometheus manifests.
-
+```
+```
 4. $ istioctl
 zsh: command not found: istioctl
 
@@ -83,8 +87,9 @@ Now, we need to set the PATH.
 5. export PATH=$PATH:/Users/bluestone/Desktop/eks-istio-demo/istio-1.23.2/bin    (Only works on the terminal instance where this command is run)
 6. $ istioctl
    This should print details about istioctl.
-
+```
 ### Install istio in the cluster
+```
 $ istioctl install 
 
 Press 'Y' when prompted.
@@ -93,11 +98,11 @@ $ kubectl get ns
 
 NAME              STATUS   AGE
 default           Active   143m
-**istio-system      Active   57s**
+istio-system      Active   57s
 kube-node-lease   Active   143m
 kube-public       Active   143m
 kube-system       Active   143m
-
+```
 
 ### Configure Envoy Proxy Injection
 Since we have deployed our microservices in default namespace, we want to add istio label in the default namespace.
@@ -133,11 +138,11 @@ NAME                                    READY   STATUS    RESTARTS   AGE
 istio-ingressgateway-64f9774bdc-65shr   1/1     Running   0          10m
 istiod-868cc8b7d7-67k7n                 1/1     Running   0          10m
 ```
-
-$ kubectl apply -f istio-1.23.2/samples/addons
-
 ```
-`$ kubectl get pods -n istio-system`
+$ kubectl apply -f istio-1.23.2/samples/addons
+```
+```
+$ kubectl get pods -n istio-system
 
 NAME                                    READY   STATUS    RESTARTS   AGE
 grafana-7f76bc9cdb-h7blc                1/1     Running   0          39s
